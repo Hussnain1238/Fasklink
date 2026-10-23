@@ -1,0 +1,756 @@
+/* Tailwind v4 CSS modules need an explicit reference so @apply can resolve utilities. */
+@reference "../app/globals.css";
+
+.page {
+  @apply min-h-screen text-slate-900;
+  background: radial-gradient(circle at top, rgba(8, 145, 178, 0.18), transparent 34%), linear-gradient(180deg, #eff4fb 0%, #f8fafc 52%, #eef2f7 100%);
+}
+
+.shell {
+  @apply mx-auto flex min-h-screen w-full max-w-7xl flex-col px-4 pb-16 pt-4 sm:px-6 lg:px-8;
+}
+
+.hero {
+  @apply relative overflow-hidden rounded-[2rem] bg-gradient-to-r from-slate-950 via-cyan-700 to-sky-500 px-5 py-6 text-white shadow-[0_20px_50px_rgba(15,23,42,0.22)] sm:px-7 sm:py-8;
+}
+
+.heroGlowTop,
+.heroGlowBottom {
+  @apply absolute rounded-full bg-white/10 blur-2xl;
+}
+
+.heroGlowTop {
+  @apply -right-12 -top-12 h-40 w-40;
+}
+
+.heroGlowBottom {
+  @apply bottom-0 left-1/3 h-28 w-28;
+}
+
+.heroRow {
+  @apply relative flex items-center gap-4;
+}
+
+.brandMark {
+  @apply flex h-14 w-14 items-center justify-center rounded-2xl border border-white/20 bg-white/15 text-lg font-extrabold backdrop-blur-sm;
+}
+
+.heroTitle {
+  @apply text-xl font-semibold tracking-tight sm:text-2xl;
+}
+
+.heroSub {
+  @apply mt-1 text-sm text-white/80;
+}
+
+.tabs {
+  @apply mt-[-1.25rem] rounded-2xl border border-slate-200/80 bg-white p-1.5 shadow-lg shadow-slate-200/60 backdrop-blur;
+}
+
+.tabGrid {
+  @apply grid grid-cols-3 gap-1.5;
+}
+
+.tabButton {
+  @apply rounded-xl px-4 py-3 text-sm font-semibold transition;
+}
+
+.tabButtonActive {
+  @apply bg-gradient-to-r from-cyan-600 to-sky-500 text-white shadow-md shadow-cyan-200;
+}
+
+.tabButtonInactive {
+  @apply text-slate-500 hover:bg-slate-50;
+}
+
+.sectionStack {
+  @apply mt-6 space-y-6;
+}
+
+.statsGrid {
+  @apply grid grid-cols-2 gap-3 md:grid-cols-3 xl:grid-cols-5;
+}
+
+.statCard {
+  @apply rounded-2xl border border-slate-200 bg-white p-4 shadow-sm shadow-slate-200/60;
+}
+
+.statValue {
+  @apply text-2xl font-extrabold text-slate-900;
+}
+
+.statValueAmber {
+  @apply text-amber-500;
+}
+
+.statValueEmerald {
+  @apply text-emerald-500;
+}
+
+.statValueRose {
+  @apply text-rose-500;
+}
+
+.statValueCyan {
+  @apply text-cyan-600;
+}
+
+.statLabel {
+  @apply mt-1 text-xs font-medium uppercase tracking-wide text-slate-500;
+}
+
+.pillRow {
+  @apply mb-3 flex gap-2 overflow-x-auto pb-1;
+}
+
+.pill {
+  @apply whitespace-nowrap rounded-full border px-4 py-2 text-sm font-semibold transition;
+}
+
+.pillActive {
+  @apply border-transparent bg-gradient-to-r from-cyan-600 to-sky-500 text-white;
+}
+
+.pillInactive {
+  @apply border-slate-200 bg-white text-slate-600 hover:border-slate-300;
+}
+
+.filterRow {
+  @apply mb-4 flex gap-2 overflow-x-auto pb-1;
+}
+
+.filterPill {
+  @apply whitespace-nowrap rounded-full border px-3 py-2 text-xs font-semibold transition;
+}
+
+.filterAllActive {
+  @apply border-cyan-600 bg-cyan-600 text-white;
+}
+
+.filterUnpaidActive {
+  @apply border-rose-500 bg-rose-500 text-white;
+}
+
+.filterTodayActive {
+  @apply border-amber-500 bg-amber-500 text-white;
+}
+
+.filterSoonActive {
+  @apply border-amber-400 bg-amber-400 text-white;
+}
+
+.filterPaidActive {
+  @apply border-emerald-500 bg-emerald-500 text-white;
+}
+
+.filterInactive {
+  @apply border-slate-200 bg-white text-slate-600 hover:border-slate-300;
+}
+
+.connectionList {
+  @apply space-y-3;
+}
+
+.connectionCard {
+  @apply rounded-2xl border border-slate-200 bg-white p-4 shadow-sm shadow-slate-200/60 border-l-4;
+}
+
+.connectionOverdue {
+  @apply border-l-rose-500;
+}
+
+.connectionToday {
+  @apply border-l-amber-500;
+}
+
+.connectionSoon {
+  @apply border-l-amber-400;
+}
+
+.connectionActive {
+  @apply border-l-emerald-500;
+}
+
+.connectionHeader {
+  @apply flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between;
+}
+
+.connectionTitleRow {
+  @apply flex flex-wrap items-center gap-2;
+}
+
+.connectionTitle {
+  @apply text-base font-bold text-slate-900;
+}
+
+.connectionTag {
+  @apply rounded-md border border-slate-200 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-slate-500;
+}
+
+.connectionMeta {
+  @apply mt-1 text-sm leading-6 text-slate-500;
+}
+
+.badge {
+  @apply inline-flex rounded-full px-3 py-1 text-xs font-bold;
+}
+
+.badgeOverdue {
+  @apply bg-rose-50 text-rose-600;
+}
+
+.badgeToday {
+  @apply bg-amber-50 text-amber-700;
+}
+
+.badgeSoon {
+  @apply bg-amber-50 text-amber-700;
+}
+
+.badgeActive {
+  @apply bg-emerald-50 text-emerald-700;
+}
+
+.actionRow {
+  @apply mt-4 flex flex-wrap gap-2;
+}
+
+.primaryButton {
+  @apply rounded-lg bg-gradient-to-r from-cyan-600 to-sky-500 px-4 py-2 text-sm font-semibold text-white;
+}
+
+.secondaryButton {
+  @apply rounded-lg border border-slate-200 px-4 py-2 text-sm font-semibold text-slate-700;
+}
+
+.customerPanel {
+  @apply mt-6 space-y-4;
+}
+
+.searchBar {
+  @apply flex flex-col gap-3 rounded-2xl border border-slate-200 bg-white p-4 shadow-sm shadow-slate-200/60 lg:flex-row;
+}
+
+.searchInput {
+  @apply min-w-0 flex-1 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm outline-none transition placeholder:text-slate-400 focus:border-cyan-500;
+}
+
+.searchActions {
+  @apply flex gap-2;
+}
+
+.outlineButton {
+  @apply rounded-xl border border-slate-200 px-4 py-3 text-sm font-semibold text-slate-700;
+}
+
+.customerGrid {
+  @apply grid gap-3 md:grid-cols-2 xl:grid-cols-3;
+}
+
+.customerCard {
+  @apply rounded-2xl border border-slate-200 bg-white p-4 shadow-sm shadow-slate-200/60;
+}
+
+.customerHeader {
+  @apply flex items-start justify-between gap-4;
+}
+
+.customerName {
+  @apply text-base font-bold text-slate-900;
+}
+
+.customerMeta {
+  @apply mt-1 text-sm text-slate-500;
+}
+
+.customerInfoRow {
+  @apply mt-2 flex flex-wrap items-center gap-2 text-xs text-slate-500;
+}
+
+.customerChip {
+  @apply rounded-md border border-slate-200 px-2 py-0.5 font-mono;
+}
+
+.customerOverdue {
+  @apply font-semibold text-rose-500;
+}
+
+.settingsPanel {
+  @apply mt-6 max-w-3xl;
+}
+
+.settingsCard {
+  @apply rounded-2xl border border-slate-200 bg-white p-5 shadow-sm shadow-slate-200/60;
+}
+
+.settingsTitle {
+  @apply text-lg font-bold text-slate-900;
+}
+
+.settingsCopy {
+  @apply mt-1 text-sm leading-6 text-slate-500;
+}
+
+.settingsField {
+  @apply mt-4 space-y-2;
+}
+
+.settingsLabel {
+  @apply text-sm font-semibold text-slate-700;
+}
+
+.settingsTextarea {
+  @apply min-h-[180px] w-full rounded-2xl border border-slate-200 bg-slate-50 p-4 text-sm leading-6 text-slate-800 outline-none transition placeholder:text-slate-400 focus:border-cyan-500;
+}
+
+.settingsHint {
+  @apply text-xs leading-6 text-slate-500;
+}
+
+.codeChip {
+  @apply rounded bg-slate-100 px-1.5 py-0.5 font-mono;
+}
+
+.settingsActions {
+  @apply mt-5 flex flex-wrap gap-2;
+}
+
+.footerBar {
+  @apply mt-8 flex flex-wrap items-center justify-center gap-2 border-t border-slate-200 pt-5 text-sm text-slate-500;
+}
+
+.footerLink {
+  @apply transition hover:text-cyan-700;
+}
+
+.fab {
+  @apply fixed bottom-5 right-5 flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-br from-cyan-600 to-sky-500 text-3xl font-light text-white shadow-[0_18px_40px_rgba(8,145,178,0.35)];
+}
+
+.modalBackdrop {
+  @apply fixed inset-0 z-40 flex items-end justify-center bg-slate-950/55 p-3 sm:items-center sm:p-6;
+}
+
+.modalPanel {
+  @apply w-full max-w-2xl overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-2xl shadow-slate-900/20;
+}
+
+.modalPanelWide {
+  @apply max-w-4xl;
+}
+
+.modalHeader {
+  @apply flex items-start justify-between gap-4 border-b border-slate-200 px-5 py-4;
+}
+
+.modalTitleBlock {
+  @apply min-w-0;
+}
+
+.modalTitle {
+  @apply text-lg font-bold text-slate-900;
+}
+
+.modalDescription {
+  @apply mt-1 text-sm leading-6 text-slate-500;
+}
+
+.modalClose {
+  @apply rounded-xl border border-slate-200 px-3 py-2 text-sm font-semibold text-slate-600 hover:bg-slate-50;
+}
+
+.modalBody {
+  @apply max-h-[80vh] overflow-y-auto px-5 py-5;
+}
+
+.modalActions {
+  @apply flex flex-wrap items-center justify-end gap-2 border-t border-slate-200 px-5 py-4;
+}
+
+.fieldGrid {
+  @apply grid gap-3 sm:grid-cols-2;
+}
+
+.field {
+  @apply space-y-2;
+}
+
+.fieldFull {
+  @apply sm:col-span-2;
+}
+
+.fieldLabel {
+  @apply text-sm font-semibold text-slate-700;
+}
+
+.fieldInput,
+.fieldSelect,
+.fieldTextarea {
+  @apply w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-cyan-500;
+}
+
+.fieldTextarea {
+  @apply min-h-[120px] resize-y;
+}
+
+.fieldHint {
+  @apply text-xs leading-5 text-slate-500;
+}
+
+.alertBox {
+  @apply rounded-xl border border-rose-200 bg-rose-50 px-4 py-3 text-sm text-rose-700;
+}
+
+.successBox {
+  @apply rounded-xl border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm text-emerald-700;
+}
+
+.tableWrap {
+  @apply overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm shadow-slate-200/60;
+}
+
+.table {
+  @apply min-w-full divide-y divide-slate-200;
+}
+
+.tableHead {
+  @apply bg-slate-50 text-left text-xs font-semibold uppercase tracking-wide text-slate-500;
+}
+
+.tableHeadCell {
+  @apply px-4 py-3;
+}
+
+.tableRow {
+  @apply hover:bg-slate-50/80;
+}
+
+.tableCell {
+  @apply px-4 py-3 text-sm text-slate-700 align-top;
+}
+
+.tableCellStrong {
+  @apply font-semibold text-slate-900;
+}
+
+.tableActions {
+  @apply flex flex-wrap gap-2;
+}
+
+.destructiveButton {
+  @apply rounded-lg border border-rose-200 bg-rose-50 px-4 py-2 text-sm font-semibold text-rose-700;
+}
+
+.ghostButton {
+  @apply rounded-lg border border-slate-200 px-4 py-2 text-sm font-semibold text-slate-700;
+}
+.page {
+  @apply min-h-screen text-slate-900;
+  background:
+    radial-gradient(circle at top, rgba(8, 145, 178, 0.18), transparent 34%),
+    linear-gradient(180deg, #eff4fb 0%, #f8fafc 52%, #eef2f7 100%);
+}
+
+.shell {
+  @apply mx-auto flex min-h-screen w-full max-w-7xl flex-col px-4 pb-16 pt-4 sm:px-6 lg:px-8;
+}
+
+.hero {
+  @apply relative overflow-hidden rounded-[2rem] px-5 py-6 text-white shadow-[0_20px_50px_rgba(15,23,42,0.22)] sm:px-7 sm:py-8;
+  background: linear-gradient(90deg, #020617 0%, #0e7490 54%, #0ea5e9 100%);
+}
+
+.heroGlowA,
+.heroGlowB {
+  @apply absolute rounded-full bg-white/10 blur-2xl;
+}
+
+.heroGlowA {
+  @apply -right-12 -top-12 h-40 w-40;
+}
+
+.heroGlowB {
+  @apply bottom-0 left-1/3 h-28 w-28;
+}
+
+.heroRow {
+  @apply relative flex items-center gap-4;
+}
+
+.heroLogo {
+  @apply flex h-14 w-14 items-center justify-center rounded-2xl border border-white/20 bg-white/15 text-lg font-extrabold backdrop-blur-sm;
+}
+
+.heroTitle {
+  @apply text-xl font-semibold tracking-tight sm:text-2xl;
+}
+
+.heroSubtitle {
+  @apply mt-1 text-sm text-white/80;
+}
+
+.tabDock {
+  @apply mt-[-1.25rem] rounded-2xl border border-slate-200/80 bg-white p-1.5 shadow-lg shadow-slate-200/60 backdrop-blur;
+}
+
+.tabGrid {
+  @apply grid grid-cols-3 gap-1.5;
+}
+
+.tabButton {
+  @apply rounded-xl px-4 py-3 text-sm font-semibold transition;
+}
+
+.tabButtonActive {
+  @apply bg-gradient-to-r from-cyan-600 to-sky-500 text-white shadow-md shadow-cyan-200;
+}
+
+.tabButtonIdle {
+  @apply text-slate-500 hover:bg-slate-50;
+}
+
+.sectionStack {
+  @apply mt-6 space-y-6;
+}
+
+.statsGrid {
+  @apply grid grid-cols-2 gap-3 md:grid-cols-3 xl:grid-cols-5;
+}
+
+.statCard {
+  @apply rounded-2xl border border-slate-200 bg-white p-4 shadow-sm shadow-slate-200/60;
+}
+
+.statValue {
+  @apply text-2xl font-extrabold;
+}
+
+.statAccentAmber {
+  @apply text-amber-500;
+}
+
+.statAccentEmerald {
+  @apply text-emerald-500;
+}
+
+.statAccentRose {
+  @apply text-rose-500;
+}
+
+.statAccentCyan {
+  @apply text-cyan-600;
+}
+
+.statLabel {
+  @apply mt-1 text-xs font-medium uppercase tracking-wide text-slate-500;
+}
+
+.rowScroll {
+  @apply mb-3 flex gap-2 overflow-x-auto pb-1;
+}
+
+.pill {
+  @apply whitespace-nowrap rounded-full border px-4 py-2 text-sm font-semibold transition;
+}
+
+.pillIdle {
+  @apply border-slate-200 bg-white text-slate-600 hover:border-slate-300;
+}
+
+.pillActive {
+  @apply border-transparent bg-gradient-to-r from-cyan-600 to-sky-500 text-white;
+}
+
+.pillAdd {
+  @apply border-dashed border-slate-300 bg-transparent text-slate-500 hover:border-slate-400;
+}
+
+.filterPill {
+  @apply whitespace-nowrap rounded-full border px-3 py-2 text-xs font-semibold transition;
+}
+
+.filterIdle {
+  @apply border-slate-200 bg-white text-slate-600 hover:border-slate-300;
+}
+
+.filterAllActive {
+  @apply border-cyan-600 bg-cyan-600 text-white;
+}
+
+.filterOverdueActive {
+  @apply border-rose-500 bg-rose-500 text-white;
+}
+
+.filterTodayActive {
+  @apply border-amber-500 bg-amber-500 text-white;
+}
+
+.filterSoonActive {
+  @apply border-amber-400 bg-amber-400 text-white;
+}
+
+.filterPaidActive {
+  @apply border-emerald-500 bg-emerald-500 text-white;
+}
+
+.connectionList {
+  @apply space-y-3;
+}
+
+.connectionCard {
+  @apply rounded-2xl border border-slate-200 bg-white p-4 shadow-sm shadow-slate-200/60 border-l-4;
+}
+
+.overdueBorder {
+  @apply border-l-rose-500;
+}
+
+.todayBorder {
+  @apply border-l-amber-500;
+}
+
+.soonBorder {
+  @apply border-l-amber-400;
+}
+
+.activeBorder {
+  @apply border-l-emerald-500;
+}
+
+.cardHeader {
+  @apply flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between;
+}
+
+.cardTitleRow {
+  @apply flex flex-wrap items-center gap-2;
+}
+
+.cardTitle {
+  @apply text-base font-bold text-slate-900;
+}
+
+.cardTag {
+  @apply rounded-md border border-slate-200 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-slate-500;
+}
+
+.cardMeta {
+  @apply mt-1 text-sm leading-6 text-slate-500;
+}
+
+.badge {
+  @apply inline-flex rounded-full px-3 py-1 text-xs font-bold;
+}
+
+.badgeOverdue {
+  @apply bg-rose-50 text-rose-600;
+}
+
+.badgeToday,
+.badgeSoon {
+  @apply bg-amber-50 text-amber-700;
+}
+
+.badgeActive {
+  @apply bg-emerald-50 text-emerald-700;
+}
+
+.actionRow {
+  @apply mt-4 flex flex-wrap gap-2;
+}
+
+.primaryButton {
+  @apply rounded-lg bg-gradient-to-r from-cyan-600 to-sky-500 px-4 py-2 text-sm font-semibold text-white;
+}
+
+.secondaryButton {
+  @apply rounded-lg border border-slate-200 px-4 py-2 text-sm font-semibold text-slate-700;
+}
+
+.searchCard {
+  @apply flex flex-col gap-3 rounded-2xl border border-slate-200 bg-white p-4 shadow-sm shadow-slate-200/60 lg:flex-row;
+}
+
+.searchInput {
+  @apply min-w-0 flex-1 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm outline-none transition placeholder:text-slate-400 focus:border-cyan-500;
+}
+
+.customerGrid {
+  @apply grid gap-3 md:grid-cols-2 xl:grid-cols-3;
+}
+
+.customerCard {
+  @apply rounded-2xl border border-slate-200 bg-white p-4 shadow-sm shadow-slate-200/60;
+}
+
+.customerHeader {
+  @apply flex items-start justify-between gap-4;
+}
+
+.customerName {
+  @apply text-base font-bold text-slate-900;
+}
+
+.customerMeta {
+  @apply mt-1 text-sm text-slate-500;
+}
+
+.customerDetails {
+  @apply mt-2 flex flex-wrap items-center gap-2 text-xs text-slate-500;
+}
+
+.cnicChip {
+  @apply rounded-md border border-slate-200 px-2 py-0.5 font-mono;
+}
+
+.dangerText {
+  @apply font-semibold text-rose-500;
+}
+
+.settingsCard {
+  @apply max-w-3xl rounded-2xl border border-slate-200 bg-white p-5 shadow-sm shadow-slate-200/60;
+}
+
+.settingsTitle {
+  @apply text-lg font-bold text-slate-900;
+}
+
+.settingsDescription {
+  @apply mt-1 text-sm leading-6 text-slate-500;
+}
+
+.fieldBlock {
+  @apply mt-4 space-y-2;
+}
+
+.fieldLabel {
+  @apply text-sm font-semibold text-slate-700;
+}
+
+.settingsTextarea {
+  @apply min-h-[180px] w-full rounded-2xl border border-slate-200 bg-slate-50 p-4 text-sm leading-6 text-slate-800 outline-none transition placeholder:text-slate-400 focus:border-cyan-500;
+}
+
+.helpLine {
+  @apply text-xs leading-6 text-slate-500;
+}
+
+.helpChip {
+  @apply rounded bg-slate-100 px-1.5 py-0.5 font-mono;
+}
+
+.settingsActions {
+  @apply mt-5 flex flex-wrap gap-2;
+}
+
+.footerBar {
+  @apply mt-8 flex flex-wrap items-center justify-center gap-2 border-t border-slate-200 pt-5 text-sm text-slate-500;
+}
+
+.footerButton {
+  @apply transition hover:text-cyan-700;
+}
+
+.fab {
+  @apply fixed bottom-5 right-5 flex h-14 w-14 items-center justify-center rounded-full text-3xl font-light text-white shadow-[0_18px_40px_rgba(8,145,178,0.35)];
+  background: linear-gradient(135deg, #0891b2 0%, #0ea5e9 100%);
+}
